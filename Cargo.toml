@@ -43,8 +43,11 @@ members = [
 futures-core = { version = "0.3", default-features = false }
 futures-sink = { version = "0.3", default-features = false }
 futures-util = { version = "0.3", default-features = false }
-tokio-util = { version = "0.2", features = ["codec"] }
-tokio = { version = "0.2", features = ["io-util", "sync"] }
+#tokio-util = { version = "0.2", features = ["codec"] }
+tokio-util = { git = "https://github.com/jlb6740/tokio.git", branch = "wasm_compartments", features = ["codec"] }
+#tokio = { version = "0.2", features = ["io-util", "sync"] }
+tokio = { git = "https://github.com/jlb6740/tokio.git", branch = "wasm_compartments", features = ["io-util", "sync"] }
+
 bytes = "0.5.2"
 http = "0.2"
 log = "0.4.1"
@@ -65,9 +68,9 @@ serde = "1.0.0"
 serde_json = "1.0.0"
 
 # Examples
-tokio = { version = "0.2", features = ["dns", "macros", "rt-core", "tcp"] }
-env_logger = { version = "0.5.3", default-features = false }
-rustls = "0.16"
-tokio-rustls = "0.12.0"
-webpki = "0.21"
-webpki-roots = "0.17"
+#tokio = { version = "0.2", features = ["dns", "macros", "rt-core", "tcp"] }
+#env_logger = { version = "0.5.3", default-features = false }
+#rustls = "0.16"
+#tokio-rustls = "0.12.0"
+#webpki = "0.21"
+#webpki-roots = "0.17"
